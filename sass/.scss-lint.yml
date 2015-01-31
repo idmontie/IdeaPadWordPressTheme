@@ -19,7 +19,7 @@ linters:
     enabled: true
 
   DuplicateProperty:
-    enabled: true
+    enabled: false # false to support ie
 
   EmptyLineBetweenBlocks:
     enabled: true
@@ -62,6 +62,12 @@ linters:
     enabled: true
     convention: hyphenated_lowercase # or 'BEM', or a regex pattern
 
+  NestingDepth:
+    max_depth: 6
+
+  QualifyingElement:
+    enabled: false # ids and elements should be selected
+
   PlaceholderInExtend:
     enabled: true
 
@@ -74,7 +80,7 @@ linters:
 
   SelectorDepth:
     enabled: true
-    max_depth: 3
+    max_depth: 6
 
   Shorthand:
     enabled: true

@@ -46,8 +46,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 html {
   font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -111,7 +111,7 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: .67em 0;
 }
 
 mark {
@@ -132,11 +132,11 @@ sup {
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 img {
@@ -234,7 +234,7 @@ input[type="search"]::-webkit-search-decoration {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: .35em .625em .75em;
 }
 
 legend {
@@ -369,13 +369,16 @@ body {
   /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
 }
 
-blockquote, q {
-  quotes: "" "";
+blockquote,
+q {
+  quotes: ' ';
 }
 
 hr {
@@ -385,7 +388,8 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0 0 1.5em 3em;
 }
 
@@ -430,14 +434,14 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+  font-size: 12px;
+  font-size: 0.75rem;
+  background: #e6e6e6;
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
   line-height: 1;
   padding: .6em 1em .4em;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
@@ -469,9 +473,9 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-  color: #666;
   border: 1px solid #ccc;
   border-radius: 3px;
+  color: #666;
 }
 
 input[type="text"]:focus,
@@ -535,9 +539,9 @@ a:hover, a:active {
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
+  left: -999em;
   position: absolute;
   top: 1.5em;
-  left: -999em;
   z-index: 99999;
 }
 .main-navigation ul ul ul {
@@ -605,20 +609,20 @@ a:hover, a:active {
 /* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
   height: 1px;
-  width: 1px;
   overflow: hidden;
+  position: absolute !important;
+  width: 1px;
 }
 .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
+  font-size: 14px;
+  font-size: 0.875rem;
   background-color: #f1f1f1;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;
   display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
   font-weight: bold;
   height: auto;
   left: 5px;
@@ -667,7 +671,7 @@ a:hover, a:active {
 .site-content:after,
 .site-footer:before,
 .site-footer:after {
-  content: "";
+  content: '';
   display: table;
 }
 
@@ -771,7 +775,7 @@ a:hover, a:active {
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
-  border: none;
+  border: 0;
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
@@ -791,13 +795,13 @@ object {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*='wp-image-'] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0;
+  margin: .8075em 0;
 }
 
 .wp-caption-text {
