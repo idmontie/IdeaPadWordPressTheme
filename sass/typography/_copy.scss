@@ -1,0 +1,62 @@
+p {
+  margin-bottom: 1.5em;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  @include font-size(.9375);
+  background: $color-background-pre;
+  font-family: $font-pre;
+  line-height: $font-line-height-pre;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  @include font-size(.9375);
+  font-family: $font-code;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $color-border-abbr;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $color-background-ins;
+  text-decoration: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
