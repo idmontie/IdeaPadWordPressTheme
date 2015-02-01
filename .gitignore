@@ -1,4 +1,4 @@
 # Ignore
-.standards/.sass-cache
+.standards/.sass-cache/*
 .standards/node_modules
 .DS_Store
