@@ -83,14 +83,14 @@ function idea_pad_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'idea-pad' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		_x( 'Written on %s by', 'post date', 'idea-pad' ),
+		 $time_string
 	);
 
-	$byline = sprintf(
-		_x( 'by %s', 'post author', 'idea-pad' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-	);
+	// $byline = sprintf(
+	// 	_x( 'by %s', 'post author', 'idea-pad' ),
+	// 	'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	// );
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
 
@@ -103,19 +103,19 @@ if ( ! function_exists( 'idea_pad_entry_footer' ) ) :
  */
 function idea_pad_entry_footer() {
 	// Hide category and tag text for pages.
-	if ( 'post' == get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'idea-pad' ) );
-		if ( $categories_list && idea_pad_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'idea-pad' ) . '</span>', $categories_list );
-		}
+	// if ( 'post' == get_post_type() ) {
+	// 	/* translators: used between list items, there is a space after the comma */
+	// 	$categories_list = get_the_category_list( __( ', ', 'idea-pad' ) );
+	// 	if ( $categories_list && idea_pad_categorized_blog() ) {
+	// 		printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'idea-pad' ) . '</span>', $categories_list );
+	// 	}
 
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'idea-pad' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'idea-pad' ) . '</span>', $tags_list );
-		}
-	}
+	// 	/* translators: used between list items, there is a space after the comma */
+	// 	$tags_list = get_the_tag_list( '', __( ', ', 'idea-pad' ) );
+	// 	if ( $tags_list ) {
+	// 		printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'idea-pad' ) . '</span>', $tags_list );
+	// 	}
+	// }
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';

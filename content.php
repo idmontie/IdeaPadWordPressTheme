@@ -5,11 +5,14 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-preview' ); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-	</header><!-- .entry-header -->
-
 	<div class="entry-content">
+		<a href="<?php echo esc_url( get_permalink() ); ?>">
+			<?php echo get_the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?> 
+		</a>
+		<header class="entry-header">
+			<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		</header><!-- .entry-header -->
+		<a href="<?php echo esc_url( get_permalink() ); ?>">
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
@@ -17,6 +20,7 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
+		</a>
 
 		<?php
 			wp_link_pages( array(
@@ -24,20 +28,20 @@
 				'after'  => '</div>',
 			) );
 		?>
+
+		<footer class="entry-footer">
+			<?php if ( 'post' == get_post_type() ) : ?>
+			<div class="entry-meta">
+				<div class="vcard vcard-small">
+					<div class="avatar"><?php echo get_avatar( get_the_author_id() ); ?></div>
+				 	<span class="written-on"><?php idea_pad_posted_on(); ?></span><br/>
+					<span class="author"><?php the_author_posts_link(); ?></span>
+					<div style="clear:both"></div>
+				</div>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</footer><!-- .entry-footer -->
+
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<div class="vcard">
-				<div class="avatar"><?php echo get_avatar( get_the_author_id() ); ?></div>
-			 	<p class="author"><?php the_author_posts_link(); ?></p>
-				<?php idea_pad_posted_on(); ?>
-				<div style="clear:both"></div>
-			</div>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</footer><!-- .entry-footer -->
 	<hr/>
 </article><!-- #post-## -->

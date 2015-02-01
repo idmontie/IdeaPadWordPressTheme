@@ -1,0 +1,121 @@
+footer {
+  .signup {
+    background-color: $footer-signup-background-color;
+    color: $footer-signup-color;
+    font-family: $font-sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    padding: $size-site-padding $size-site-padding * 2;
+
+    .signup-inner {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px;
+      padding: $size-site-padding;
+
+      &:after {
+        @include clearfix;
+      }
+    }
+
+    label {
+      display: none;
+    }
+
+    p {
+      float: left;
+      margin: 0;
+      width: 70px;
+
+      &:first-child {
+        width: 90%;
+        width: calc(100% - 70px);
+      }
+
+      input {
+        border-radius: 5px 0 0 5px;
+        height: 41px;
+
+        &:first-child {
+          border-radius: 0 5px 5px 0;
+        }        
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    
+  }
+
+  .related-articles {
+    background-color: $footer-related-background-color;
+    color: $footer-related-color;
+    font-family: $font-sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    padding: $size-site-padding $size-site-padding * 2;
+
+    .related-articles-inner {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px;
+      padding: $size-site-padding;
+
+      &:after {
+        @include clearfix;
+      }
+    }
+
+    a {
+      color: $footer-legal-color;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 5px 0;
+      padding: 0;
+
+      li {
+        @include transition-all(.5);
+        background-color: darken($footer-related-background-color, 10%);
+        border-radius: 5px;
+        display: block;
+        float: left;
+        font-size: 16px;
+        font-weight: 800;
+        list-style: none;
+        margin: 0 10px 0 0;
+        padding: 5px 15px;
+
+        &:hover {
+          background-color: darken($footer-related-background-color, 20%);
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .site-info {
+    background-color: $footer-legal-background-color;
+    color: $footer-legal-color;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 20px 50px;
+    text-align: center;
+
+    a {
+      color: $footer-legal-color;
+    }
+  }
+}

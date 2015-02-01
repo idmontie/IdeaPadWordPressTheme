@@ -1,19 +1,56 @@
 .vcard {
-  margin-top: 10px;
+  margin: $size-site-padding auto;
+  width: 400px;
+
+  &.vcard-small,
+  &.comment-author {
+    line-height: 20px;
+    margin: $size-site-padding 0;
+    width: auto;
+
+    img {
+      border-width: 3px;
+      max-height: 50px;
+      max-width: 50px;
+    }
+
+    span {
+      font-size: 14px;
+    }
+  }
+
   img {
     -ms-border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
+    border: 5px solid rgb(216, 216, 216);
     border-radius: 50%;
     float: left;
     margin-right: 20px;
-    max-height: 40px;
-    max-width: 40px;
+    max-height: 80px;
+    max-width: 80px;
   }
 
-  p,
   span {
-    font-size: 12px;
+    font-family: $font-serif;
+    font-size: 18px;
+    line-height: 26px;
     margin: 0;
+
+    &.author {
+      color: #453e3e;
+
+      a {
+        color: #453e3e;
+      }
+    }
+
+    &.posted-on {
+      color: #a6a0a0;
+
+      a {
+        color: #a6a0a0;
+      }
+    }
   }
 }

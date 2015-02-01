@@ -23,6 +23,7 @@
 
 .post-preview {
   h1 {
+    display: inline-block;
     font-size: 22px;
     margin-bottom: 0;
 
@@ -41,5 +42,21 @@
 
   .entry-content {
     margin-top: 10px;
+
+    &:after {
+      @include clearfix;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img.attachment-thumbnail {
+      float: right;
+      border: 1px solid #dedede;
+      border-radius: 5px;
+      padding: 2px;
+    }
   }
 }

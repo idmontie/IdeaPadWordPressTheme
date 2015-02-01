@@ -13,6 +13,7 @@
 
 // Clearfix
 @mixin clearfix() {
+  clear: both;
   content: '';
   display: table;
 }
@@ -20,4 +21,13 @@
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
   clear: both;
+}
+
+
+// Transitions
+@mixin transition-all($seconds) {
+  -moz-transition: all #{$seconds}s ease-in-out;
+  -o-transition: all #{$seconds}s ease-in-out;
+  -webkit-transition: all #{$seconds}s ease-in-out;
+  transition: all #{$seconds}s ease-in-out;
 }

@@ -21,14 +21,15 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
   <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'idea-pad' ); ?></a>
+  <?php
+    $image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );
+  ?>
 
   <?php if ( is_front_page() || is_home() ) : ?>
     <?php
-      $image = '';
-      $image = get_post_meta( get_the_ID(), 'hero-image' );
-      if ( isset( $image ) && ! empty( $image ) ) {
-        $image = $image[0];
-      }
+      // =================
+      // Front Page header
+      // =================
     ?>
     <?php if ( isset( $image ) && ! empty( $image ) ) : ?>
       <header id="masthead" class="site-header" role="banner" style="background-image: url( <?php echo $image; ?>)">
@@ -40,13 +41,11 @@
         <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
       </div><!-- .site-branding -->
     </header><!-- #masthead -->
-  <?php else: ?>
-    <?php
-      $image = '';
-      $image = get_post_meta( get_the_ID(), 'hero-image' );
-      if ( isset( $image ) && ! empty( $image ) ) {
-        $image = $image[0];
-      }
+  <?php elseif ( is_single() ) : ?>
+     <?php
+      // ==================
+      // Single Page header
+      // ==================
     ?>
     <?php if ( isset( $image ) && ! empty( $image ) ) : ?>
       <header class="entry-header header-top" role="banner" style="background-image: url( <?php echo $image; ?>)">
@@ -54,6 +53,22 @@
       <header class="entry-header header-top" role="banner">
     <?php endif; ?>
       <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    </header><!-- .entry-header -->
+  <?php else : ?>
+    <?php
+      // ===========
+      // Page header
+      // ===========
+    ?>
+    <?php if ( isset( $image ) && ! empty( $image ) ) : ?>
+      <header class="entry-header header-top" role="banner" style="background-image: url( <?php echo $image; ?>)">
+    <?php else: ?>
+      <header class="entry-header header-top" role="banner">
+    <?php endif; ?>
+      <?php
+        the_archive_title( '<h1 class="page-title">', '</h1>' );
+        the_archive_description( '<div class="taxonomy-description">', '</div>' );
+      ?>
     </header><!-- .entry-header -->
   <?php endif; ?> 
   <nav id="site-navigation" class="main-navigation" role="navigation">

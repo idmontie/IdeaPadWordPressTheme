@@ -7,6 +7,7 @@ $navigation-color-dark-fade: fade-out($navigation-color-dark, .1);
 $navigation-font-color:      $theme-header-color;
 
 .main-navigation {
+  @include transition-all(.5);
   border-color: $navigation-color-dark-fade #000 #000;
   border-color: $navigation-color-dark-fade transparent transparent;
   border-style: solid;
@@ -18,14 +19,11 @@ $navigation-font-color:      $theme-header-color;
   max-width: $navigation-size;
   position: fixed;
   top: 0;
-  -moz-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
   width: $navigation-size;
   z-index: 999999;
 
   &:before {
+    @include transition-all(.5);
     content: '\f0c9';
     font: normal normal normal 14px/1 FontAwesome;
     font-size: 1.6em;
@@ -33,10 +31,6 @@ $navigation-font-color:      $theme-header-color;
     position: absolute;
     right: -35px;
     top: -75px;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
   }
 
   &:hover,

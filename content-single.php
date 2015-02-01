@@ -17,7 +17,14 @@
 
 	<footer class="entry-footer">
 		<div class="entry-meta">
-			<?php idea_pad_posted_on(); ?>
+			<hr />
+			<div class="vcard">
+				<div class="avatar"><?php echo get_avatar( get_the_author_id() ); ?></div>
+			 	<span class="written-on"><?php idea_pad_posted_on(); ?></span><br/>
+				<span class="author"><?php the_author_posts_link(); ?></span>
+				<div style="clear:both"></div>
+			</div>
+			<hr />
 		</div><!-- .entry-meta -->
 
 		<?php idea_pad_entry_footer(); ?>
