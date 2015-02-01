@@ -1,0 +1,19 @@
+.vcard {
+  margin-top: 10px;
+  img {
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    max-height: 40px;
+    max-width: 40px;
+  }
+
+  p,
+  span {
+    font-size: 12px;
+    margin: 0;
+  }
+}

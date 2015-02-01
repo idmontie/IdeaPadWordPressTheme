@@ -1,4 +1,20 @@
 header {
+  &.entry-header.header-top {
+    background-color: #4fa6ef;
+    background-position: center;
+    background-size: cover;
+    margin: 0 0 20px;
+    padding: 20px;
+
+    h1 {
+      color: #fff;
+      margin-bottom: 10vh;
+      margin-top: 10vh;
+      text-align: center;
+      text-shadow: 1px 2px 13px rgba(0, 0, 0, .72);
+    }
+  }
+
   &.site-header {
     background-color: $theme-primary;
     background-position: center;

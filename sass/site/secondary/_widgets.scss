@@ -7,6 +7,23 @@
 	}
 }
 
+// ===============
+// Sidebar Widgets
+// ===============
+.widget-area {
+  aside {
+    .widget-title {
+      font-size: 24px;
+    }
+
+    input[type=search] {
+      font-size: 16px;
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
 /* Search widget. */
 .widget_search .search-submit {
 	display: none;

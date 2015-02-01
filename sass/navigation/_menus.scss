@@ -1,10 +1,10 @@
-$navigation-size: 450px;
-$navigation-triangle-size: 80px;
-$navigation-size-inner: $navigation-size - $navigation-triangle-size;
-$navigation-color: $theme-primary;
-$navigation-color-dark: darken($navigation-color, 10%);
-$navigation-color-dark-fade: fade-out(darken($navigation-color, 10%), .1);
-$navigation-font-color: $theme-header-color;
+$navigation-size:            350px;
+$navigation-triangle-size:   80px;
+$navigation-size-inner:      $navigation-size - $navigation-triangle-size;
+$navigation-color:           darken($theme-primary, 5%);
+$navigation-color-dark:      #1769ae;
+$navigation-color-dark-fade: fade-out($navigation-color-dark, .1);
+$navigation-font-color:      $theme-header-color;
 
 .main-navigation {
   border-color: $navigation-color-dark-fade #000 #000;
@@ -12,7 +12,6 @@ $navigation-font-color: $theme-header-color;
   border-style: solid;
   border-width: $navigation-triangle-size $navigation-triangle-size 0 0;
   color: $navigation-font-color;
-  cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
   height: 0;
   left: -$navigation-size-inner; /* this needs to be equal to the width of itself! */
@@ -33,7 +32,7 @@ $navigation-font-color: $theme-header-color;
     opacity: 1;
     position: absolute;
     right: -35px;
-    top: -69px;
+    top: -75px;
     -moz-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
@@ -70,20 +69,34 @@ $navigation-font-color: $theme-header-color;
     width: 0;
   }
 
-  h3.site-title {
-    font-size: 1.4em;
+  // =============
+  // Sidebar Title
+  // =============
+  .site-title {
+    display: table;
+    height: $navigation-triangle-size;
     position: absolute;
-    top: -95px;
+    top: -$navigation-triangle-size;
     z-index: 99999;
 
-    @media(max-width: $screen-xs-max) {
-      font-size: 1.1em;
-    }
+    h3 {
+      display: table-cell;
+      font-size: 1.4em;
+      vertical-align: middle;
 
-    a {
-      color: $navigation-font-color;
+      @media(max-width: $screen-xs-max) {
+        font-size: 1.1em;
+      }
+
+      a {
+        color: $navigation-font-color;
+      }
     }
   }
+
+  // =============
+  // List Elements
+  // =============
 
   ul {
     list-style: none;
@@ -127,10 +140,21 @@ $navigation-font-color: $theme-header-color;
 
   li {
     background-color: $navigation-color-dark;
+    font-family: $font-sans-serif;
+    font-size: 14px;
+    margin-bottom: 1px;
     padding: 10px;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
     width: 100%;
 
-    > a {
+    &:hover {
+      background-color: darken($navigation-color-dark, 5%);
+    }
+
+    a {
       color: $navigation-font-color;
     }
   }
@@ -141,20 +165,9 @@ $navigation-font-color: $theme-header-color;
   }
 }
 
-/* Small menu. */
-.menu-toggle {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
-    display: block;
-  }
-
-  .main-navigation ul {
-    display: none;
-  }
+.menu-toggle,
+.main-navigation.toggled .nav-menu {
+  display: block;
 }
 
 .site-main .comment-navigation,

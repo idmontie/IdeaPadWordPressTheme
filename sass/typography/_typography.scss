@@ -5,7 +5,7 @@ select,
 textarea {
   @include font-size(1.375);
   color: $color-text-main;
-  font-family: $font-main;
+  font-family: $font-serif;
   -ms-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   font-style: normal;
