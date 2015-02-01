@@ -1,8 +1,89 @@
+$navigation-size: 450px;
+$navigation-triangle-size: 80px;
+$navigation-size-inner: $navigation-size - $navigation-triangle-size;
+$navigation-color: $theme-primary;
+$navigation-color-dark: darken($navigation-color, 10%);
+$navigation-color-dark-fade: fade-out(darken($navigation-color, 10%), .1);
+$navigation-font-color: $theme-header-color;
+
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
+  border-color: $navigation-color-dark-fade #000 #000;
+  border-color: $navigation-color-dark-fade transparent transparent;
+  border-style: solid;
+  border-width: $navigation-triangle-size $navigation-triangle-size 0 0;
+  color: $navigation-font-color;
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+  height: 0;
+  left: -$navigation-size-inner; /* this needs to be equal to the width of itself! */
+  max-width: $navigation-size;
+  position: fixed;
+  top: 0;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  width: $navigation-size;
+  z-index: 999999;
+
+  &:before {
+    content: '\f0c9';
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 1.6em;
+    opacity: 1;
+    position: absolute;
+    right: -35px;
+    top: -69px;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $navigation-color-dark #000 #000;
+    border-color: $navigation-color-dark transparent transparent;
+    height: 100%;
+    left: 0;
+    max-width: calc(100% - 80px);
+
+    &:before {
+      opacity: 0;
+    }
+
+    .content {
+      background-color: $navigation-color;
+      display: block;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      overflow: auto;
+      padding: 20px;
+      width: $navigation-size;
+    }
+  }
+
+  .content {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  h3.site-title {
+    font-size: 1.4em;
+    position: absolute;
+    top: -95px;
+    z-index: 99999;
+
+    @media(max-width: $screen-xs-max) {
+      font-size: 1.1em;
+    }
+
+    a {
+      color: $navigation-font-color;
+    }
+  }
 
   ul {
     list-style: none;
@@ -45,11 +126,13 @@
   }
 
   li {
-    float: left;
-    position: relative;
+    background-color: $navigation-color-dark;
+    padding: 10px;
+    width: 100%;
 
-    // &:hover > a {
-    // }
+    > a {
+      color: $navigation-font-color;
+    }
   }
 
   a {

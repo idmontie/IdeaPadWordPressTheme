@@ -10,6 +10,7 @@ html {
 
 body {
   background: $color-background-body; /* Fallback for when there is no custom background color defined. */
+  position: relative;
 }
 
 blockquote:before,

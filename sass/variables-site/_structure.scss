@@ -1,2 +1,15 @@
 $size-site-main: 100%;
 $size-site-sidebar: 25%;
+
+// =======================
+// Media Query Breakpoints
+// =======================
+
+$screen-xs-min: 480px !default;
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+ 
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
