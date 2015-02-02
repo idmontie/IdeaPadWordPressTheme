@@ -17,6 +17,7 @@
 
 	<footer class="entry-footer">
 		<div class="entry-meta">
+			<p><?php the_tags(); ?></p>
 			<hr />
 			<div class="vcard">
 				<div class="avatar"><?php echo get_avatar( get_the_author_id() ); ?></div>

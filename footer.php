@@ -48,7 +48,7 @@
               while( $my_query->have_posts() ) {
                 $my_query->the_post();
               ?>
-                  <li><a rel="external" href="<? the_permalink()?>">
+                  <li><a rel="external" href="<?php the_permalink()?>">
                     <?php the_title(); ?>
                   </a></li>
             
