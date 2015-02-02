@@ -13,6 +13,22 @@ body {
   position: relative;
 }
 
+blockquote {
+  border-left: 5px solid desaturate($theme-aggro, 20%);
+  color: desaturate($theme-aggro, 20%);
+  font-style: italic;
+  margin: 5px;
+  padding: $size-site-padding;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
 blockquote:before,
 blockquote:after,
 q:before,

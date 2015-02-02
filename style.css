@@ -377,6 +377,20 @@ body {
   position: relative;
 }
 
+blockquote {
+  border-left: 5px solid #ec5253;
+  color: #ec5253;
+  font-style: italic;
+  margin: 5px;
+  padding: 20px;
+}
+blockquote p:first-child {
+  margin-top: 0;
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 blockquote:before,
 blockquote:after,
 q:before,
