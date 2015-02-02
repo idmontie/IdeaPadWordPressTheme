@@ -103,6 +103,8 @@ add_action( 'widgets_init', 'idea_pad_widgets_init' );
 function idea_pad_scripts() {
 	wp_enqueue_style( 'idea-pad-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'idea-pad-menu', get_template_directory_uri() . '/js/menu.js', array(), '20150201', true );
+
 	wp_enqueue_script( 'idea-pad-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'idea-pad-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

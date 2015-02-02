@@ -582,6 +582,7 @@ a:hover, a:active {
 .main-navigation:hover, .main-navigation:focus {
   border-color: #1769ae #000 #000;
   border-color: #1769ae transparent transparent;
+  border-right-width: 0;
   height: 100%;
   left: 0;
   max-width: calc(100% - 80px);
@@ -590,19 +591,28 @@ a:hover, a:active {
   opacity: 0;
 }
 .main-navigation:hover .content, .main-navigation:focus .content {
-  background-color: #389aed;
   display: block;
+}
+.main-navigation.hover {
+  border-color: #1769ae #000 #000;
+  border-color: #1769ae transparent transparent;
+  border-right-width: 0;
+  height: 100%;
+  left: 0;
+  max-width: calc(100% - 80px);
+}
+.main-navigation.hover:before {
+  opacity: 0;
+}
+.main-navigation .content {
+  background-color: #389aed;
+  display: none;
   height: auto;
   max-height: 100%;
   max-width: 100%;
   overflow: auto;
   padding: 20px;
   width: 350px;
-}
-.main-navigation .content {
-  display: none;
-  height: 0;
-  width: 0;
 }
 .main-navigation .site-title {
   display: table;

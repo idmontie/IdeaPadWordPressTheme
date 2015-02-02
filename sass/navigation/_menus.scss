@@ -37,6 +37,7 @@ $navigation-font-color:      $theme-header-color;
   &:focus {
     border-color: $navigation-color-dark #000 #000;
     border-color: $navigation-color-dark transparent transparent;
+    border-right-width: 0;
     height: 100%;
     left: 0;
     max-width: calc(100% - 80px);
@@ -46,21 +47,32 @@ $navigation-font-color:      $theme-header-color;
     }
 
     .content {
-      background-color: $navigation-color;
       display: block;
-      height: auto;
-      max-height: 100%;
-      max-width: 100%;
-      overflow: auto;
-      padding: 20px;
-      width: $navigation-size;
+    }
+  }
+
+  &.hover {
+    border-color: $navigation-color-dark #000 #000;
+    border-color: $navigation-color-dark transparent transparent;
+    border-right-width: 0;
+    height: 100%;
+    left: 0;
+    max-width: calc(100% - 80px);
+
+    &:before {
+      opacity: 0;
     }
   }
 
   .content {
+    background-color: $navigation-color;
     display: none;
-    height: 0;
-    width: 0;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: auto;
+    padding: 20px;
+    width: $navigation-size;
   }
 
   // =============
