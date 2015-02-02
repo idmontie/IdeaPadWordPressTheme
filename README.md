@@ -1,6 +1,6 @@
 # Idea Pad Wordpress Theme
 
-A [Medium](http://medium.com) inspired, open-source Wordpress Theme.
+A [Medium](http://medium.com) inspired, open-source Wordpress Theme.  This project is licensed under GPLv3.
 
 ![Idea Pad Preview](/screenshot.png)
 
