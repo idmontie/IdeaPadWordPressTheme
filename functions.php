@@ -101,9 +101,15 @@ add_action( 'widgets_init', 'idea_pad_widgets_init' );
  * Enqueue scripts and styles.
  */
 function idea_pad_scripts() {
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome-4.3.0/css/font-awesome.min.css' );
+
+	wp_enqueue_style( 'idea-pad-open-sans', get_template_directory_uri() . '/assets/open-sans/css/open-sans.css' );
+
 	wp_enqueue_style( 'idea-pad-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'idea-pad-menu', get_template_directory_uri() . '/js/menu.js', array(), '20150201', true );
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/jquery/jquery-1.11.2.min.js', array(), '20150201', true );
+
+	wp_enqueue_script( 'idea-pad-menu', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), '20150201', true );
 
 	wp_enqueue_script( 'idea-pad-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
