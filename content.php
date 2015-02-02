@@ -33,7 +33,7 @@
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<div class="vcard vcard-small">
-					<div class="avatar"><?php echo get_avatar( get_the_author_id() ); ?></div>
+					<div class="avatar"><?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?></div>
 				 	<span class="written-on"><?php idea_pad_posted_on(); ?></span><br/>
 					<span class="author"><?php the_author_posts_link(); ?></span>
 					<div style="clear:both"></div>
