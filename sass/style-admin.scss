@@ -1,0 +1,9 @@
+@import 'variables-site/variables-site';
+@import 'mixins/mixins-master';
+@import 'normalize';
+@import 'typography/typography';
+@import 'elements/elements';
+
+.wp-editor {
+  margin: 0 10px;
+}

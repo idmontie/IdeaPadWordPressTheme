@@ -121,6 +121,14 @@ function idea_pad_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'idea_pad_scripts' );
 
+/** 
+ * Enqueue admin style
+ */
+function idea_pad_add_editor_styles() {
+	add_editor_style( 'style-admin.css' );
+}
+add_action( 'admin_init', 'idea_pad_add_editor_styles' );
+
 /**
  * Implement the Custom Header feature.
  */

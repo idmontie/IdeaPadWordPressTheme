@@ -41,6 +41,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '../style.css' : '../sass/style.scss',
+          '../style-admin.css' : '../sass/style-admin.scss'
         }
       }
     }
