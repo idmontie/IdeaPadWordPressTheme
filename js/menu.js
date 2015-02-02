@@ -9,15 +9,17 @@
   jQuery( function ( $ ) {
     var fixedBackground = function () {
       $( 'body' ).css( {
-        'max-height' : '100%',
-        'overflow' : 'hidden'
+        'overflow': 'scroll',
+        'position': 'fixed',
+        'width': '100%'
       } );
     };
 
     var scrollBackground = function () {
       $( 'body' ).css( {
-        'max-height' : 'auto',
-        'overflow' : 'auto'
+        'width' : 'auto',
+        'overflow' : 'auto',
+        'position': 'relative'
       } );
     }
 
