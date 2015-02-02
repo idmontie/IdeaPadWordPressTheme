@@ -40,7 +40,7 @@
                 'post__not_in' => array( $post->ID ),
                  // Number of related posts to display.
                 'posts_per_page' => 3,
-                'caller_get_posts' => 1
+                'ignore_sticky_posts' => 1
               );
             
               $my_query = new wp_query( $args );
