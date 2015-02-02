@@ -579,7 +579,7 @@ a:hover, a:active {
   right: -35px;
   top: -75px;
 }
-.main-navigation:hover, .main-navigation:focus {
+.main-navigation:hover {
   border-color: #1769ae #000 #000;
   border-color: #1769ae transparent transparent;
   border-right-width: 0;
@@ -587,10 +587,10 @@ a:hover, a:active {
   left: 0;
   max-width: calc(100% - 80px);
 }
-.main-navigation:hover:before, .main-navigation:focus:before {
+.main-navigation:hover:before {
   opacity: 0;
 }
-.main-navigation:hover .content, .main-navigation:focus .content {
+.main-navigation:hover .content {
   display: block;
 }
 .main-navigation.hover {

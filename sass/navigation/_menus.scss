@@ -33,8 +33,7 @@ $navigation-font-color:      $theme-header-color;
     top: -75px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: $navigation-color-dark #000 #000;
     border-color: $navigation-color-dark transparent transparent;
     border-right-width: 0;

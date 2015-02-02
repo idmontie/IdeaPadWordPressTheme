@@ -42,20 +42,21 @@
     // =========
     scrollBackground();
   } )
+  $( document ).on( {
+    'touchend, mouseup' : function ( e ) {
+      var container = $( navSelector );
 
-  $( document ).mouseup( function ( e ) {
-    var container = $( navSelector );
+      if ( ! container.is( e.target )
+          && container.has( e.target ).length === 0) {
+        scrollBackground();
 
-    if ( ! container.is( e.target )
-        && container.has( e.target ).length === 0) {
-      scrollBackground();
+        // Close the navigation
+        container.removeClass( 'hover' );
 
-      // Close the navigation
-      container.removeClass( 'hover' );
-
-      container.find( '.content' ).css( {
-        display: 'none'
-      } );
+        container.find( '.content' ).css( {
+          display: 'none'
+        } );
+      }
     }
   } );
 } )();
