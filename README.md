@@ -25,6 +25,14 @@ Here are reasons to NOT use this theme:
 2. (*Optional*) Download, install, and activate the [MailChimp Plugin](https://wordpress.org/plugins/mailchimp-for-wp/).
 3. (*Optional*) Change your sidebar widgets! Keep in mind that this theme only supports minimal header menus. One level only!
 
+# Publishing
+
+If you are a writer/publisher, the following tips will help you get the most out of your blog:
+
+* Use the `<!--more-->` tag appropriately.  If you don't use it, the theme will grab the first chunk of characters from your post as the excerpt.
+* Add a feature image to your posts and pages.  It is what is displayed at the top of the page instead of the blue banner.
+* A feature image should be a high resolution image, and image around 2500x1000 or bigger will do.  The focal point of the image should be in the center.
+
 # Developing
 
 We use SCSS.  If you want to compile it, install NodeJS, Grunt, and Ruby. Then run:
