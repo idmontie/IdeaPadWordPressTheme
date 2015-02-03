@@ -361,6 +361,25 @@ strong.search-excerpt {
   background-color: #fff633;
 }
 
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/*
+ * Extra font awesome rotation!
+ */
+.fa-rotate-45 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 ul,
 ol {
   margin: 0 0 1.5em 3em;

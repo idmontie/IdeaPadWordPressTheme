@@ -1,5 +1,11 @@
 .sticky {
+  background-color: $theme-pop;
 	display: block;
+  padding: $size-site-padding;
+
+  .stick-tack {
+    margin: $size-site-padding;
+  }
 }
 
 .hentry {

@@ -51,6 +51,25 @@ strong.search-excerpt {
   background-color: $theme-pop;
 }
 
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/*
+ * Extra font awesome rotation!
+ */
+.fa-rotate-45 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 @import 'lists';
 
 img {

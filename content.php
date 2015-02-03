@@ -5,8 +5,15 @@
  */
 ?>
 
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-preview' ); ?>>
 	<div class="entry-content">
+		<?php if ( is_sticky() ) : ?>
+			<span class="fa-stack fa-lg pull-left stick-tack">
+			  <i class="fa fa-square fa-stack-2x"></i>
+			  <i class="fa fa-thumb-tack fa-inverse fa-stack-1x fa-rotate-45"></i>
+			</span>
+		<?php endif; ?>
 		<a href="<?php echo esc_url( get_permalink() ); ?>">
 			<?php echo get_the_post_thumbnail( get_the_ID(), 'thumbnail' ); ?> 
 		</a>
