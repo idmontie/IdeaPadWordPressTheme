@@ -14,11 +14,7 @@
 		</header><!-- .entry-header -->
 		<a href="<?php echo esc_url( get_permalink() ); ?>">
 		<?php
-			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				'',
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+			echo wp_strip_all_tags( get_the_excerpt() );
 		?>
 		</a>
 
