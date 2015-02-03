@@ -20,48 +20,51 @@
     <?php endif; ?>
 
     <?php if ( ! is_home() && ! is_front_page() ) : ?>
-      <div class="related-articles">
-        <div class="related-articles-inner">
-          <h3>Related Articles</h3>
-          <ul>
-          <?php
-            $orig_post = $post;
-            global $post;
-            $tags = wp_get_post_tags( $post->ID );
-            
-            if ( $tags ) {
-              $tag_ids = array();
-              foreach( $tags as $individual_tag ) {
-                $tag_ids[] = $individual_tag->term_id;
-              }
+      <?php
+        $orig_post = $post;
+        global $post;
+        $tags = wp_get_post_tags( $post->ID );
+        
+        if ( $tags ) :
+          $tag_ids = array();
+          foreach( $tags as $individual_tag ) {
+            $tag_ids[] = $individual_tag->term_id;
+          }
 
-              $args = array(
-                'tag__in' => $tag_ids,
-                'post__not_in' => array( $post->ID ),
-                 // Number of related posts to display.
-                'posts_per_page' => 3,
-                'ignore_sticky_posts' => 1
-              );
-            
-              $my_query = new wp_query( $args );
+          $args = array(
+            'tag__in' => $tag_ids,
+            'post__not_in' => array( $post->ID ),
+             // Number of related posts to display.
+            'posts_per_page' => 3,
+            'ignore_sticky_posts' => 1
+          );
+        
+          $my_query = new wp_query( $args );
 
-              while( $my_query->have_posts() ) {
-                $my_query->the_post();
-              ?>
+          if ( $my_query->have_posts() ) :
+        ?>
+          <div class="related-articles">
+            <div class="related-articles-inner">
+              <h3>Related Articles</h3>
+              <ul>
+                <?php
+                while( $my_query->have_posts() ) :
+                  $my_query->the_post();
+                ?>
                   <li><a rel="external" href="<?php the_permalink()?>">
                     <?php the_title(); ?>
                   </a></li>
-            
-              <?php
-              }
-            }
+                <?php
+                endwhile;
 
-            $post = $orig_post;
-            wp_reset_query();
-          ?>
-          </ul>
-        </div>
-      </div><!-- .related-articles -->
+                $post = $orig_post;
+                wp_reset_query();
+              ?>
+              </ul>
+            </div>
+          </div><!-- .related-articles -->
+        <?php endif; ?>
+      <?php endif; ?>
     <?php endif; ?>
 
     <div class="site-info">
