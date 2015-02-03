@@ -1,5 +1,6 @@
 <?php
 /**
+ * @see content-search.php
  * @package Idea Pad
  */
 ?>

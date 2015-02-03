@@ -47,6 +47,10 @@ hr {
   height: 1px;
 }
 
+strong.search-excerpt {
+  background-color: $theme-pop;
+}
+
 @import 'lists';
 
 img {

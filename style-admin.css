@@ -357,6 +357,10 @@ hr {
   height: 1px;
 }
 
+strong.search-excerpt {
+  background-color: #fff633;
+}
+
 ul,
 ol {
   margin: 0 0 1.5em 3em;
