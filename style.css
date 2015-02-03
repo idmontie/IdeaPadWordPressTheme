@@ -726,6 +726,8 @@ header.entry-header.header-top h1 {
   margin-top: 10vh;
   text-align: center;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5), -1px -1px 8px rgba(0, 0, 0, 0.5), -1px 1px 8px rgba(0, 0, 0, 0.5), 1px -1px 8px rgba(0, 0, 0, 0.5);
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
 header.site-header {
   background-color: #4fa6ef;

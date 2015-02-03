@@ -6,6 +6,10 @@
 ( function() {
   'use strict';
 
+  function hasScrollBar() {
+    return jQuery(document).height() > jQuery(window).height();
+  }
+
   function getScrollBarWidth () {
     var inner = document.createElement('p');
     inner.style.width = "100%";
@@ -36,9 +40,10 @@
     var originalMarginRight = $( 'body' ).css( 'margin-right' );
 
     var fixedBackground = function () {
+      var offset = ( hasScrollBar() ? getScrollBarWidth() : originalMarginRight );
       $( 'body' ).css( {
         'height': '100%',
-        'margin-right' : getScrollBarWidth(),
+        'margin-right' : offset,
         'overflow': 'hidden'
       } );
     };

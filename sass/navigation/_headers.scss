@@ -17,6 +17,8 @@ header {
       margin-top: 10vh;
       text-align: center;
       text-shadow: $header-shadow;
+      -ms-word-wrap: break-word;
+      word-wrap: break-word;
     }
   }
 
