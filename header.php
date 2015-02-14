@@ -60,14 +60,16 @@
       // ===========
     ?>
     <?php if ( isset( $image ) && ! empty( $image ) ) : ?>
-      <header class="entry-header header-top" role="banner" style="background-image: url( <?php echo $image; ?>)">
+      <header class="site-header entry-header header-top" role="banner" style="background-image: url( <?php echo $image; ?>)">
     <?php else: ?>
-      <header class="entry-header header-top" role="banner">
+      <header class="site-header entry-header header-top" role="banner">
     <?php endif; ?>
+      <div class="site-branding">
       <?php
         the_archive_title( '<h1 class="page-title">', '</h1>' );
-        the_archive_description( '<div class="taxonomy-description">', '</div>' );
+        the_archive_description( '<h2 class="taxonomy-description site-description">', '</h2>' );
       ?>
+      </div>
     </header><!-- .entry-header -->
   <?php endif; ?> 
   <nav id="site-navigation" class="main-navigation" role="navigation">
