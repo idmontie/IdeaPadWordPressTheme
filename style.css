@@ -589,7 +589,7 @@ a:hover, a:active {
   width: 350px;
   z-index: 99998;
 }
-@media (max-width: 782px) {
+@media (max-width: 782px) and (min-width: 600px) {
   .admin-bar .main-navigation {
     top: 46px;
   }

@@ -24,7 +24,7 @@ $navigation-font-color:      $theme-header-color;
 
   // Special styles for if we are in admin view
   .admin-bar & {
-    @media (max-width: 782px) {
+    @media (max-width: 782px) and (min-width: 600px) {
       top: 46px;
 
       &:hover,
