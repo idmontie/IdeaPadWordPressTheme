@@ -118,6 +118,9 @@ function idea_pad_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js
+	wp_enqueue_script( 'idea-pad-google-prettify', get_template_directory_uri() . '/js/run_prettify.js', array(), '20150416', true );
 }
 add_action( 'wp_enqueue_scripts', 'idea_pad_scripts' );
 

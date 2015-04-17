@@ -80,6 +80,5 @@
 
 <?php wp_footer(); ?>
 
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 </body>
 </html>
