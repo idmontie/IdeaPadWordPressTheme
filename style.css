@@ -587,7 +587,23 @@ a:hover, a:active {
   position: fixed;
   top: 0;
   width: 350px;
-  z-index: 999999;
+  z-index: 99998;
+}
+@media (max-width: 782px) {
+  .admin-bar .main-navigation {
+    top: 46px;
+  }
+  .admin-bar .main-navigation:hover, .admin-bar .main-navigation.hover {
+    height: calc(100% - 46px);
+  }
+}
+@media (min-width: 783px) {
+  .admin-bar .main-navigation {
+    top: 32px;
+  }
+  .admin-bar .main-navigation:hover, .admin-bar .main-navigation.hover {
+    height: calc(100% - 32px);
+  }
 }
 .main-navigation:before {
   -moz-transition: all 0.5s ease-in-out;

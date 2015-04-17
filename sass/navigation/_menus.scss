@@ -20,7 +20,28 @@ $navigation-font-color:      $theme-header-color;
   position: fixed;
   top: 0;
   width: $navigation-size;
-  z-index: 999999;
+  z-index: 99998;
+
+  // Special styles for if we are in admin view
+  .admin-bar & {
+    @media (max-width: 782px) {
+      top: 46px;
+
+      &:hover,
+      &.hover {
+        height: calc(100% - 46px);
+      }
+    }
+
+    @media (min-width: 783px) {
+      top: 32px;
+
+      &:hover,
+      &.hover {
+        height: calc(100% - 32px);
+      }
+    }
+  }
 
   &:before {
     @include transition-all(.5);
