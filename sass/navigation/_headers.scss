@@ -27,9 +27,12 @@ header {
     background-position: center;
     background-size: cover;
     color: $theme-header-color;
+    max-width: 100%;
+    overflow: hidden;
     padding-bottom: 25px;
     padding-top: 50px;
     text-align: center;
+    text-overflow: ellipsis;
 
     a {
       color: $theme-header-color;
