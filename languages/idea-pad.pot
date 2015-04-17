@@ -116,7 +116,7 @@ msgid "Primary Menu"
 msgstr ""
 
 #: functions.php:88
-msgid "Sidebar"
+msgid "Sidebar Navigation"
 msgstr ""
 
 #: header.php:22
