@@ -95,6 +95,22 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
+#: footer.php:16
+msgid "Subscribe"
+msgstr ""
+
+#: footer.php:48
+msgid "Related Articles"
+msgstr ""
+
+#: footer.php:71
+msgid "Copyright"
+msgstr ""
+
+#: footer.php:72
+msgid "All Rights Reserved"
+msgstr ""
+
 #: functions.php:53 header.php:31
 msgid "Primary Menu"
 msgstr ""

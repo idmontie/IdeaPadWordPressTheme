@@ -13,7 +13,7 @@
     <?php if( function_exists( 'mc4wp_form' ) ) : ?>
       <div class="signup">
         <div class="signup-inner">
-          <h3 class="subscribe">Subscribe</h3>
+          <h3 class="subscribe"><?php _e( 'Subscribe', 'idea-pad' ); ?></h3>
           <?php mc4wp_form(); ?>
         </div>
       </div>
@@ -45,7 +45,7 @@
         ?>
           <div class="related-articles">
             <div class="related-articles-inner">
-              <h3>Related Articles</h3>
+              <h3><?php _e( 'Related Articles', 'idea-pad' ); ?></h3>
               <ul>
                 <?php
                 while( $my_query->have_posts() ) :
@@ -68,8 +68,8 @@
     <?php endif; ?>
 
     <div class="site-info">
-      Copyright &copy; <script>document.write(new Date().getFullYear())</script>
-&middot; All Rights Reserved &middot; <?php bloginfo( 'name' ); ?>
+      <?php _e( 'Copyright', 'idea-pad' ); ?> &copy; <script>document.write(new Date().getFullYear())</script>
+&middot; <?php _e( 'All Rights Reserved', 'idea-pad' ); ?> &middot; <?php bloginfo( 'name' ); ?>
 			<br/>
 			<?php printf( __( 'WordPress Theme: %1$s by %2$s.', 'idea-pad' ), 'Idea Pad', '<a href="http://github.com/idmontie" rel="designer">Ivan Montiel and Daniela Howe</a>' ); ?>
       <br/>
