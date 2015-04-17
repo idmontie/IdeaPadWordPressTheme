@@ -107,7 +107,7 @@ function idea_pad_scripts() {
 
 	wp_enqueue_style( 'idea-pad-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/jquery/jquery-1.11.2.min.js', array(), '20150201', true );
+	// wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/jquery/jquery-1.11.2.min.js', array(), '20150201', true );
 
 	wp_enqueue_script( 'idea-pad-menu', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), '20150201', true );
 
