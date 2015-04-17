@@ -1,6 +1,6 @@
-# Idea Pad Wordpress Theme
+# Idea Pad WordPress Theme
 
-A [Medium](http://medium.com) inspired, open-source Wordpress Theme.  This project is licensed under GPLv3.
+A [Medium](http://medium.com) inspired, open-source WordPress Theme.  This project is licensed under GPLv3.
 
 ![Idea Pad Preview](/screenshot.png)
 
@@ -47,7 +47,7 @@ grunt
 
 This will automatically compile the SCSS files into one `style.css` file.
 
-Feel free to fork the repo and make changes to the theme to suit your needs.  If you want to use your forked repo without uploading it to Wordpress, we recommend using the [Github Updater](https://github.com/afragen/github-updater) plugin for Wordpress.
+Feel free to fork the repo and make changes to the theme to suit your needs.  If you want to use your forked repo without uploading it to WordPress, we recommend using the [Github Updater](https://github.com/afragen/github-updater) plugin for WordPress.
 
 If you find bugs, have any feature requests, or find something missing, use the GitHub issue tracker and read [the contributing guide](CONTRIBUTING.md).
 

@@ -1,8 +1,8 @@
 # How to contribute
-Please follow these quick rules whenever contributing to the Idea Pad Wordpress Theme.
+Please follow these quick rules whenever contributing to the Idea Pad WordPress Theme.
 
 ## Opening issues
-1. If you have a question about setting up/using this theme, please check out the [Wordpress Theme docs](http://codex.wordpress.org/Using_Themes) or try searching  [StackOverflow](http://wordpress.stackexchange.com/).
+1. If you have a question about setting up/using this theme, please check out the [WordPress Theme docs](http://codex.wordpress.org/Using_Themes) or try searching  [StackOverflow](http://wordpress.stackexchange.com/).
 2. Search for issues similar to yours in [GitHub search](https://github.com/idmontie/idea-pad-wordpress-theme/search?type=Issues).
 3. If there's an open issue, please contribute to that issue.
 4. If there's a closed issue, open a new issue and link the url of the already closed issue(s).

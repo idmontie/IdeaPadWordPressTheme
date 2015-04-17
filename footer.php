@@ -71,7 +71,7 @@
       Copyright &copy; <script>document.write(new Date().getFullYear())</script>
 &middot; All Rights Reserved &middot; <?php bloginfo( 'name' ); ?>
 			<br/>
-			<?php printf( __( 'Wordpress Theme: %1$s by %2$s.', 'idea-pad' ), 'Idea Pad', '<a href="http://github.com/idmontie" rel="designer">Ivan Montiel and Daniela Howe</a>' ); ?>
+			<?php printf( __( 'WordPress Theme: %1$s by %2$s.', 'idea-pad' ), 'Idea Pad', '<a href="http://github.com/idmontie" rel="designer">Ivan Montiel and Daniela Howe</a>' ); ?>
       <br/>
       <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'idea-pad' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'idea-pad' ), 'WordPress' ); ?></a>
 		</div><!-- .site-info -->
