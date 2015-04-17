@@ -89,8 +89,6 @@ function idea_pad_scripts() {
 
 	wp_enqueue_style( 'idea-pad-style', get_stylesheet_uri() );
 
-	// wp_enqueue_script( 'jquery', get_template_directory_uri() . '/assets/jquery/jquery-1.11.2.min.js', array(), '20150201', true );
-
 	wp_enqueue_script( 'idea-pad-menu', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), '20150201', true );
 
 	wp_enqueue_script( 'idea-pad-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -101,7 +99,7 @@ function idea_pad_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js
+	// Script from https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js
 	wp_enqueue_script( 'idea-pad-google-prettify', get_template_directory_uri() . '/js/run_prettify.js', array(), '20150416', true );
 }
 add_action( 'wp_enqueue_scripts', 'idea_pad_scripts' );
